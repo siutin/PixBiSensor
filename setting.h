@@ -13,7 +13,9 @@
 *										PORT DEFINITION
 ***********************************************************************************************
 */
-
+//light Intensity signal LED pins 
+#define LI_SIGN_LED PORTCbits.RC4
+#define LI_SIGN_LED_TRIS TRISCbits.TRISC4 
 
 //SHT10 signal LED pins 
 #define SHT10_CONN_LED PORTAbits.RA3
