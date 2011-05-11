@@ -11,6 +11,7 @@
 void
 DelayMs(unsigned char cnt)
 {
+char b;
 #if	XTAL_FREQ <= 2MHZ
 	do {
 		DelayUs(996);
@@ -25,5 +26,6 @@ DelayMs(unsigned char cnt)
 			DelayUs(250);
 		} while(--i);
 	} while(--cnt);
+	b=0;
 #endif
 }

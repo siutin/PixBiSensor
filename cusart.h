@@ -12,8 +12,8 @@
 *
 ***********************************************************************************************
 */
-#ifndef __CUSTOM_USART_H
-#define __CUSTOM_USART_H
+#ifndef CUSTOM_USART_H
+#define CUSTOM_USART_H
 /*
 ***********************************************************************************************
 *										PORT DEFINITION
@@ -36,10 +36,13 @@
 *	 
 ***********************************************************************************************
 */
-	
 	#define _1msec_16bit 65095
 
 	void cUSART_tInit(void);
+	int ugetIdx(void);
+	void uSetIdx(int d);
+	int uAddIdx(void);
 	void uputc(char data);
 	void uputs(char *s);
+	void uprintc(char data);
 #endif

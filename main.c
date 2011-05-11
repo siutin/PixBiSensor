@@ -1,7 +1,10 @@
 #include "p18F2520.h"
 #include "setup.h"
 #include "setting.h"	// Load Customized Source Code
+#define mode 0 
 
+//char mychar[4]="ABCDEFGabcdefg123456";
+char mychar='C';
 ////////// INTERRUPT HANDLER /////////////
 void high_ISR(void);
 #pragma code high_vector=0x08
@@ -12,16 +15,23 @@ void high_interrupt(void){
 #pragma code
 #pragma interrupt high_ISR
 void high_ISR(void){
+#if mode
 	if(PIR1bits.ADIF == 1)
 	{
 		if(ReadADC() <200 )
 			LI_SIGN_LED = ~LI_SIGN_LED;
 		PIR1bits.ADIF = 0;
 	}
-//	if(PIR1bits.TMR1IF == 1) {
-//		PIR1bits.TMR1IF = 0;
-//		//cnt=(cnt == 10)?0:cnt++;
-//	}
+#endif
+	if(PIR1bits.TMR1IF) {
+		//PIR1bits.TMR1IF = 0;
+		CloseTimer1();
+		uputc(mychar);
+		//uAddIdx();
+		//itoa(uAddIdx(),buffer);
+		//putsUSART(buffer);
+		cUSART_tInit();
+	}
 }
 /////////////////////////////////////
 #pragma udata mydata
@@ -32,9 +42,12 @@ void high_ISR(void){
 void main(void){
 	int i = 0,adcResult;
 	unsigned char error, checksum;
+	char Msg[]="HelloWorld!";
 	value humi_val, temp_val;
 	myfloat h_val , t_val;
 
+	OSCCON |= 0x70;
+	OSCTUNE = 0x40;
 	UART_CTS_TRIS = OUT;	
 	UART_TX_TRIS = OUT;		 //Tx
 	UART_RX_TRIS = IN;		//Rx
@@ -49,29 +62,40 @@ void main(void){
 	SHT10_CONN_LED = 0;
 	SHT10_SIGN_LED = 0;
 
-	OpenADC(ADC_FOSC_8 & ADC_RIGHT_JUST , ADC_CH0 & ADC_INT_ON , 0);
-	OpenUSART(USART_TX_INT_OFF & USART_RX_INT_ON & USART_ASYNCH_MODE &
-			  USART_EIGHT_BIT & USART_CONT_RX & USART_BRGH_HIGH ,BAUD_RATE_GEN);
-
-	s_softreset();			//reset the SHT10 sensor
-	cUSART_tInit();
-
-	ADCON1 = 0x0d;			//All digital operation	for RA2 & RA0 pins being digital for SHT10 sensor
 	RCONbits.IPEN = 1; 		//enable interrupt priority
+
+#if mode
+	OpenADC(ADC_FOSC_8 & ADC_RIGHT_JUST , ADC_CH0 & ADC_INT_ON , 0);
+	ADCON1 = 0x0d;			//All digital operation	for RA2 & RA0 pins being digital for SHT10 sensor
 	IPR1bits.ADIP = 1;		// A/D high interrupt priority 
 	PIR1bits.ADIF = 0;		// A/D converter interrupt flag bit clear
 	PIE1bits.ADIE = 1;		// A/D interrupt enabled
-	
+#endif
+
+	OpenUSART(USART_TX_INT_OFF & USART_RX_INT_ON & USART_ASYNCH_MODE &
+			  USART_EIGHT_BIT & USART_CONT_RX & USART_BRGH_HIGH ,BAUD_RATE_GEN);
+	IPR1bits.RCIP = 1;		// UART receive interrupt high prority
+	PIR1bits.RCIF = 0;		// clear UART receive flag
+	PIE1bits.RCIE = 1;		// UART Reception interrupt Enable
 	IPR1bits.TMR1IP = 1;	//set TMR1 interrupt to high priorit
 
-	IPR1bits.RCIP = 1;		// receive interrupt high prority
-
-	PIR1bits.RCIF = 0;		//PIR1bits.RCIF
-	PIE1bits.RCIE = 1;		//Reception interrupt Enable
 	INTCONbits.GIEH = 1;	//enable all interrupts
-	
-	while(1){
 
+#if mode
+	s_softreset();			//reset the SHT10 sensor
+#endif
+	cUSART_tInit();
+	while(1){
+		//uprintc('A');
+		//uputc('A');
+		//while(BusyUSART()&& !UART_CTS); 
+		//putsUSART(Msg);
+	//mychar='A';
+	//	mychar='B';
+	DelayMs(200);
+	}
+	while(1){
+	#if mode
 		error=0;
 	    error+=s_measure((unsigned char*)&humi_val.i,&checksum,HUMI);  	//measure humidity
 	    error+=s_measure((unsigned char*)&temp_val.i,&checksum,TEMP);  	//measure temperature
@@ -106,6 +130,9 @@ void main(void){
 			putsUSART(astr);
 			uputs(astr);
 	    }
+	#else
+		
+	#endif
 	      //----------wait approx. 1s to avoid heating up SHTxx--------------          
 		
 //		if(BusyUSART()&& !UART_CTS){
