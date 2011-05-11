@@ -37,7 +37,8 @@
 ***********************************************************************************************
 */
 	
-	#define _1msec_16bit 65095
+	//#define _1msec_16bit 65095
+	#define _1msec_16bit 64793
 
 	void cUSART_tInit(void);
 	void uputc(char data);

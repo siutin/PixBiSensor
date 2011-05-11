@@ -26,6 +26,8 @@ void high_ISR(void){
 /////////////////////////////////////
 #pragma udata mydata
  unsigned char buffer1[6],buffer2[6];
+ char to232[]="to RS232 ";
+ char toxbee[]="to xBee";
  char astr[60]; 
 #pragma
 
@@ -34,6 +36,9 @@ void main(void){
 	unsigned char error, checksum;
 	value humi_val, temp_val;
 	myfloat h_val , t_val;
+
+	OSCCON |= 0x70;
+	OSCTUNE = 0x40;
 
 	UART_CTS_TRIS = OUT;	
 	UART_TX_TRIS = OUT;		 //Tx
@@ -49,27 +54,33 @@ void main(void){
 	SHT10_CONN_LED = 0;
 	SHT10_SIGN_LED = 0;
 
-	OpenADC(ADC_FOSC_8 & ADC_RIGHT_JUST , ADC_CH0 & ADC_INT_ON , 0);
-	OpenUSART(USART_TX_INT_OFF & USART_RX_INT_ON & USART_ASYNCH_MODE &
-			  USART_EIGHT_BIT & USART_CONT_RX & USART_BRGH_HIGH ,BAUD_RATE_GEN);
+	RCONbits.IPEN = 1; 		//enable interrupt priority
 
-	s_softreset();			//reset the SHT10 sensor
-	cUSART_tInit();
+	OpenADC(ADC_FOSC_8 & ADC_RIGHT_JUST , ADC_CH0 & ADC_INT_ON , 0);
 
 	ADCON1 = 0x0d;			//All digital operation	for RA2 & RA0 pins being digital for SHT10 sensor
-	RCONbits.IPEN = 1; 		//enable interrupt priority
 	IPR1bits.ADIP = 1;		// A/D high interrupt priority 
 	PIR1bits.ADIF = 0;		// A/D converter interrupt flag bit clear
 	PIE1bits.ADIE = 1;		// A/D interrupt enabled
-	
+
+	OpenUSART(USART_TX_INT_OFF & USART_RX_INT_ON & USART_ASYNCH_MODE &
+			  USART_EIGHT_BIT & USART_CONT_RX & USART_BRGH_HIGH ,BAUD_RATE_GEN);
+
+	IPR1bits.RCIP = 1;		// UART receive interrupt high prority
+	PIR1bits.RCIF = 0;		// clear UART receive flag
+	PIE1bits.RCIE = 1;		// UART Reception interrupt Enable
 	IPR1bits.TMR1IP = 1;	//set TMR1 interrupt to high priorit
 
-	IPR1bits.RCIP = 1;		// receive interrupt high prority
-
-	PIR1bits.RCIF = 0;		//PIR1bits.RCIF
-	PIE1bits.RCIE = 1;		//Reception interrupt Enable
 	INTCONbits.GIEH = 1;	//enable all interrupts
-	
+
+	s_softreset();			//reset the SHT10 sensor
+	cUSART_tInit();
+	while(1){
+		uputs(to232);
+		putsUSART(toxbee);
+		for(i=0;i<5;i++)
+			DelayMs(200);
+	}
 	while(1){
 
 		error=0;
@@ -112,8 +123,8 @@ void main(void){
 //			input = getcUSART();
 //			putcUSART(input);
 //		}
-//		uputs(to232);
-//		putsUSART(toxbee);
+		//uputs(to232);
+		//putsUSART(toxbee);
 		for(i=0;i<5;i++)
 			DelayMs(200);
 	}
