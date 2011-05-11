@@ -75,12 +75,7 @@ void main(void){
 
 	s_softreset();			//reset the SHT10 sensor
 	cUSART_tInit();
-	while(1){
-		uputs(to232);
-		putsUSART(toxbee);
-		for(i=0;i<5;i++)
-			DelayMs(200);
-	}
+
 	while(1){
 
 		error=0;

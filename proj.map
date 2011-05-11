@@ -1,5 +1,5 @@
 MPLINK 4.37, Linker
-Linker Map File - Created Wed May 11 15:29:12 2011
+Linker Map File - Created Wed May 11 15:35:36 2011
 
                                  Section Info
                   Section       Type    Address   Location Size(Bytes)
@@ -11,82 +11,82 @@ Linker Map File - Created Wed May 11 15:29:12 2011
          .code_vfprintf.o       code   0x00001c    program   0x000c22
      .code_SHT1x_helper.o       code   0x000c3e    program   0x0007ea
                      PROG       code   0x001428    program   0x000510
-             .code_main.o       code   0x001938    program   0x0003a8
-            .code_SHT1x.o       code   0x001ce0    program   0x000390
-           .code_cusart.o       code   0x002070    program   0x0000e8
-          .code_sprintf.o       code   0x002158    program   0x0000ac
-               _cinit_scn       code   0x002204    program   0x00009e
-            .code_uopen.o       code   0x0022a2    program   0x00008a
-             .code_putc.o       code   0x00232c    program   0x000084
-          .code_fxm3232.o       code   0x0023b0    program   0x000070
-          .code_adcopen.o       code   0x002420    program   0x00006e
-                   STRING       code   0x00248e    program   0x000066
-            .code_uputs.o       code   0x0024f4    program   0x00004c
-         .code_fxd3232u.o       code   0x002540    program   0x000048
-             .stringtable    romdata   0x002588    program   0x000043
-       .romdata_adcbusy.o    romdata   0x0025cb    program   0x000000
-         .idata_uopen.o_i    romdata   0x0025cb    program   0x000000
-       .idata_adcconv.o_i    romdata   0x0025cb    program   0x000000
-        .romdata___init.o    romdata   0x0025cb    program   0x000000
-       .romdata_t1write.o    romdata   0x0025cb    program   0x000000
-         .romdata_uopen.o    romdata   0x0025cb    program   0x000000
-      .idata_fxd1616u.o_i    romdata   0x0025cb    program   0x000000
-       .idata_t1write.o_i    romdata   0x0025cb    program   0x000000
-       .idata_adcread.o_i    romdata   0x0025cb    program   0x000000
-       .romdata_adcopen.o    romdata   0x0025cb    program   0x000000
-        .idata_uwrite.o_i    romdata   0x0025cb    program   0x000000
-        .romdata_uwrite.o    romdata   0x0025cb    program   0x000000
-  .idata_SHT1x_helper.o_i    romdata   0x0025cb    program   0x000000
-       .idata_sprintf.o_i    romdata   0x0025cb    program   0x000000
-        .idata_cusart.o_i    romdata   0x0025cb    program   0x000000
-       .romdata_sprintf.o    romdata   0x0025cb    program   0x000000
-         .romdata_delay.o    romdata   0x0025cb    program   0x000000
-         .romdata_SHT1x.o    romdata   0x0025cb    program   0x000000
-      .romdata_fxd3232u.o    romdata   0x0025cb    program   0x000000
-       .idata_fxm3232.o_i    romdata   0x0025cb    program   0x000000
-          .romdata_main.o    romdata   0x0025cb    program   0x000000
-    .idata__user_putc.o_i    romdata   0x0025cb    program   0x000000
-         .romdata_c018i.o    romdata   0x0025cb    program   0x000000
-            .code_udefs.o       code   0x0025cc    program   0x000000
-           .code_t1open.o       code   0x0025cc    program   0x000042
-            .code_delay.o       code   0x00260e    program   0x00003e
-          .code_t1write.o       code   0x00264c    program   0x000038
-           .code_uwrite.o       code   0x002684    program   0x00002e
-         .code_fxd1616u.o       code   0x0026b2    program   0x00002c
-                    CTYPE       code   0x0026de    program   0x000024
-                    .code       code   0x002702    program   0x000020
-             _startup_scn       code   0x002722    program   0x00001c
-                    STDIO       code   0x00273e    program   0x00001c
-          .code_adcread.o       code   0x00275a    program   0x000012
-      .romdata_vfprintf.o    romdata   0x00276c    program   0x000011
-          .romdata_putc.o    romdata   0x00277d    program   0x000000
-          .idata_putc.o_i    romdata   0x00277d    program   0x000000
-    .romdata__user_putc.o    romdata   0x00277d    program   0x000000
-       .romdata_fxm3232.o    romdata   0x00277d    program   0x000000
-      .idata_fxd3232u.o_i    romdata   0x00277d    program   0x000000
-         .idata_SHT1x.o_i    romdata   0x00277d    program   0x000000
-      .idata_vfprintf.o_i    romdata   0x00277d    program   0x000000
-         .idata_delay.o_i    romdata   0x00277d    program   0x000000
-         .idata_c018i.o_i    romdata   0x00277d    program   0x000000
-        .romdata_cusart.o    romdata   0x00277d    program   0x000000
-        .romdata_t1open.o    romdata   0x00277d    program   0x000000
-        .idata_t1open.o_i    romdata   0x00277d    program   0x000000
-       .idata_adcopen.o_i    romdata   0x00277d    program   0x000000
-       .romdata_adcread.o    romdata   0x00277d    program   0x000000
-      .romdata_fxd1616u.o    romdata   0x00277d    program   0x000000
-        .idata___init.o_i    romdata   0x00277d    program   0x000000
-       .romdata_adcconv.o    romdata   0x00277d    program   0x000000
-         .idata_uputs.o_i    romdata   0x00277d    program   0x000000
-         .romdata_uputs.o    romdata   0x00277d    program   0x000000
-       .idata_adcbusy.o_i    romdata   0x00277d    program   0x000000
-         .idata_udefs.o_i    romdata   0x00277d    program   0x000000
-         .romdata_udefs.o    romdata   0x00277d    program   0x000000
-  .romdata_SHT1x_helper.o    romdata   0x00277d    program   0x000000
-          .code_adcbusy.o       code   0x00277e    program   0x00000a
-            .code_c018i.o       code   0x00277e    program   0x000000
-          .code_adcconv.o       code   0x002788    program   0x000004
-           .code___init.o       code   0x00278c    program   0x000002
-          .idata_main.o_i    romdata   0x00278e    program   0x000012
+            .code_SHT1x.o       code   0x001938    program   0x000390
+             .code_main.o       code   0x001cc8    program   0x000356
+           .code_cusart.o       code   0x00201e    program   0x0000e8
+          .code_sprintf.o       code   0x002106    program   0x0000ac
+               _cinit_scn       code   0x0021b2    program   0x00009e
+            .code_uopen.o       code   0x002250    program   0x00008a
+             .code_putc.o       code   0x0022da    program   0x000084
+          .code_fxm3232.o       code   0x00235e    program   0x000070
+          .code_adcopen.o       code   0x0023ce    program   0x00006e
+                   STRING       code   0x00243c    program   0x000066
+            .code_uputs.o       code   0x0024a2    program   0x00004c
+         .code_fxd3232u.o       code   0x0024ee    program   0x000048
+             .stringtable    romdata   0x002536    program   0x000043
+       .romdata_adcbusy.o    romdata   0x002579    program   0x000000
+         .idata_uopen.o_i    romdata   0x002579    program   0x000000
+       .idata_adcconv.o_i    romdata   0x002579    program   0x000000
+        .romdata___init.o    romdata   0x002579    program   0x000000
+       .romdata_t1write.o    romdata   0x002579    program   0x000000
+         .romdata_uopen.o    romdata   0x002579    program   0x000000
+      .idata_fxd1616u.o_i    romdata   0x002579    program   0x000000
+       .idata_t1write.o_i    romdata   0x002579    program   0x000000
+       .idata_adcread.o_i    romdata   0x002579    program   0x000000
+       .romdata_adcopen.o    romdata   0x002579    program   0x000000
+        .idata_uwrite.o_i    romdata   0x002579    program   0x000000
+        .romdata_uwrite.o    romdata   0x002579    program   0x000000
+  .idata_SHT1x_helper.o_i    romdata   0x002579    program   0x000000
+       .idata_sprintf.o_i    romdata   0x002579    program   0x000000
+        .idata_cusart.o_i    romdata   0x002579    program   0x000000
+       .romdata_sprintf.o    romdata   0x002579    program   0x000000
+         .romdata_delay.o    romdata   0x002579    program   0x000000
+         .romdata_SHT1x.o    romdata   0x002579    program   0x000000
+      .romdata_fxd3232u.o    romdata   0x002579    program   0x000000
+       .idata_fxm3232.o_i    romdata   0x002579    program   0x000000
+          .romdata_main.o    romdata   0x002579    program   0x000000
+    .idata__user_putc.o_i    romdata   0x002579    program   0x000000
+         .romdata_c018i.o    romdata   0x002579    program   0x000000
+            .code_udefs.o       code   0x00257a    program   0x000000
+           .code_t1open.o       code   0x00257a    program   0x000042
+            .code_delay.o       code   0x0025bc    program   0x00003e
+          .code_t1write.o       code   0x0025fa    program   0x000038
+           .code_uwrite.o       code   0x002632    program   0x00002e
+         .code_fxd1616u.o       code   0x002660    program   0x00002c
+                    CTYPE       code   0x00268c    program   0x000024
+                    .code       code   0x0026b0    program   0x000020
+             _startup_scn       code   0x0026d0    program   0x00001c
+                    STDIO       code   0x0026ec    program   0x00001c
+          .code_adcread.o       code   0x002708    program   0x000012
+      .romdata_vfprintf.o    romdata   0x00271a    program   0x000011
+          .romdata_putc.o    romdata   0x00272b    program   0x000000
+          .idata_putc.o_i    romdata   0x00272b    program   0x000000
+    .romdata__user_putc.o    romdata   0x00272b    program   0x000000
+       .romdata_fxm3232.o    romdata   0x00272b    program   0x000000
+      .idata_fxd3232u.o_i    romdata   0x00272b    program   0x000000
+         .idata_SHT1x.o_i    romdata   0x00272b    program   0x000000
+      .idata_vfprintf.o_i    romdata   0x00272b    program   0x000000
+         .idata_delay.o_i    romdata   0x00272b    program   0x000000
+         .idata_c018i.o_i    romdata   0x00272b    program   0x000000
+        .romdata_cusart.o    romdata   0x00272b    program   0x000000
+        .romdata_t1open.o    romdata   0x00272b    program   0x000000
+        .idata_t1open.o_i    romdata   0x00272b    program   0x000000
+       .idata_adcopen.o_i    romdata   0x00272b    program   0x000000
+       .romdata_adcread.o    romdata   0x00272b    program   0x000000
+      .romdata_fxd1616u.o    romdata   0x00272b    program   0x000000
+        .idata___init.o_i    romdata   0x00272b    program   0x000000
+       .romdata_adcconv.o    romdata   0x00272b    program   0x000000
+         .idata_uputs.o_i    romdata   0x00272b    program   0x000000
+         .romdata_uputs.o    romdata   0x00272b    program   0x000000
+       .idata_adcbusy.o_i    romdata   0x00272b    program   0x000000
+         .idata_udefs.o_i    romdata   0x00272b    program   0x000000
+         .romdata_udefs.o    romdata   0x00272b    program   0x000000
+  .romdata_SHT1x_helper.o    romdata   0x00272b    program   0x000000
+          .code_adcbusy.o       code   0x00272c    program   0x00000a
+            .code_c018i.o       code   0x00272c    program   0x000000
+          .code_adcconv.o       code   0x002736    program   0x000004
+           .code___init.o       code   0x00273a    program   0x000002
+          .idata_main.o_i    romdata   0x00273c    program   0x000012
     .config_300001_main.o    romdata   0x300001    program   0x000001
     .config_300002_main.o    romdata   0x300002    program   0x000001
     .config_300003_main.o    romdata   0x300003    program   0x000001
@@ -152,47 +152,47 @@ Linker Map File - Created Wed May 11 15:29:12 2011
                               Program Memory Usage 
                                Start         End      
                            ---------   ---------      
-                            0x000000    0x0025ca      
-                            0x0025cc    0x00277c      
-                            0x00277e    0x00279f      
+                            0x000000    0x002578      
+                            0x00257a    0x00272a      
+                            0x00272c    0x00274d      
                             0x300001    0x300003      
                             0x300005    0x300006      
-            10147 out of 33048 program addresses used, program memory utilization is 30%
+            10065 out of 33048 program addresses used, program memory utilization is 30%
 
 
 
                               Symbols - Sorted by Name
                      Name    Address   Location    Storage File                     
                 ---------  ---------  ---------  --------- ---------                
-                  BusyADC   0x00277e    program     extern C:\MCC18\src\pmc_common\ADC\adcbusy.c
-               ConvertADC   0x002788    program     extern C:\MCC18\src\pmc_common\ADC\adcconv.c
+                  BusyADC   0x00272c    program     extern C:\MCC18\src\pmc_common\ADC\adcbusy.c
+               ConvertADC   0x002736    program     extern C:\MCC18\src\pmc_common\ADC\adcconv.c
                    D1616S   0x00167c    program     static C:\MCC18\src\traditional\math\fxd1616s.asm
                 D1616SNEG   0x00168a    program     static C:\MCC18\src\traditional\math\fxd1616s.asm
                  D1616SOK   0x001686    program     static C:\MCC18\src\traditional\math\fxd1616s.asm
                   D1616SX   0x00169c    program     static C:\MCC18\src\traditional\math\fxd1616s.asm
                   DA1616S   0x00166c    program     static C:\MCC18\src\traditional\math\fxd1616s.asm
-                  DelayMs   0x00260e    program     extern E:\PIC18F2520_sensor_custom_uart_RS232\delay.c
+                  DelayMs   0x0025bc    program     extern E:\PIC18F2520_sensor_custom_uart_RS232\delay.c
                  FLO1632S   0x00142c    program     extern C:\MCC18\src\traditional\math\cast16FP.asm
                  FLO1632U   0x001428    program     extern C:\MCC18\src\traditional\math\cast16FP.asm
                     FPA32   0x001454    program     extern C:\MCC18\src\traditional\math\addFP.asm
                     FPM32   0x001580    program     extern C:\MCC18\src\traditional\math\mulFP.asm
                     FPS32   0x001452    program     extern C:\MCC18\src\traditional\math\addFP.asm
                  FXD1616S   0x00165a    program     extern C:\MCC18\src\traditional\math\fxd1616s.asm
-                 FXD1616U   0x0026b2    program     extern C:\MCC18\src\traditional\math\fxd1616u.c
-                 FXD3232U   0x002540    program     extern C:\MCC18\src\traditional\math\fxd3232u.c
+                 FXD1616U   0x002660    program     extern C:\MCC18\src\traditional\math\fxd1616u.c
+                 FXD3232U   0x0024ee    program     extern C:\MCC18\src\traditional\math\fxd3232u.c
                  FXM1616S   0x0016a6    program     extern C:\MCC18\src\traditional\math\fxm1616s.asm
-                  FXM3232   0x0023b0    program     extern C:\MCC18\src\traditional\math\fxm3232.c
+                  FXM3232   0x00235e    program     extern C:\MCC18\src\traditional\math\fxm3232.c
                   INT3216   0x001700    program     extern C:\MCC18\src\traditional\math\castFP16.asm
-                  OpenADC   0x002420    program     extern C:\MCC18\src\pmc_common\ADC\adcopen.c
-               OpenTimer1   0x0025cc    program     extern C:\MCC18\src\pmc_common\Timers\t1open.c
-                OpenUSART   0x0022a2    program     extern C:\MCC18\src\pmc_common\USART\uopen.c
-                  ReadADC   0x00275a    program     extern C:\MCC18\src\pmc_common\ADC\adcread.c
+                  OpenADC   0x0023ce    program     extern C:\MCC18\src\pmc_common\ADC\adcopen.c
+               OpenTimer1   0x00257a    program     extern C:\MCC18\src\pmc_common\Timers\t1open.c
+                OpenUSART   0x002250    program     extern C:\MCC18\src\pmc_common\USART\uopen.c
+                  ReadADC   0x002708    program     extern C:\MCC18\src\pmc_common\ADC\adcread.c
                   TAGTB32   0x00175e    program     extern C:\MCC18\src\traditional\math\gtFP.asm
                   TALTB32   0x001770    program     extern C:\MCC18\src\traditional\math\ltFP.asm
                TSIGN1616A   0x0016f2    program     static C:\MCC18\src\traditional\math\fxm1616s.asm
-              WriteTimer1   0x00264c    program     extern C:\MCC18\src\pmc_common\Timers\t1write.c
-               WriteUSART   0x002684    program     extern C:\MCC18\src\pmc_common\USART\uwrite.c
-                   _2jEnd   0x0024de    program     static C:\MCC18\src\traditional\stdclib\slenpgm.asm
+              WriteTimer1   0x0025fa    program     extern C:\MCC18\src\pmc_common\Timers\t1write.c
+               WriteUSART   0x002632    program     extern C:\MCC18\src\pmc_common\USART\uwrite.c
+                   _2jEnd   0x00248c    program     static C:\MCC18\src\traditional\stdclib\slenpgm.asm
               __FpCompare   0x001782    program     extern C:\MCC18\src\traditional\math\compFP.asm
                  __FpExit   0x001838    program     extern C:\MCC18\src\traditional\math\packFP.asm
                  __FpPack   0x001864    program     extern C:\MCC18\src\traditional\math\packFP.asm
@@ -207,18 +207,18 @@ Linker Map File - Created Wed May 11 15:29:12 2011
               __FpUnPackA   0x0018dc    program     extern C:\MCC18\src\traditional\math\UnpackFP.asm
               __FpUnPackB   0x00190c    program     extern C:\MCC18\src\traditional\math\UnpackFP.asm
        ___return_lbl00000   0x000004    program     static                          
-       ___return_lbl00000   0x002586    program     static                          
+       ___return_lbl00000   0x002534    program     static                          
        ___return_lbl00000   0x00000c    program     static                          
-       ___return_lbl00000   0x00241e    program     static                          
-       ___return_lbl00000   0x0026dc    program     static                          
-       ___return_lbl00001   0x00273c    program     static                          
-       ___return_lbl00002   0x0022a0    program     static                          
+       ___return_lbl00000   0x0023cc    program     static                          
+       ___return_lbl00000   0x00268a    program     static                          
+       ___return_lbl00001   0x0026ea    program     static                          
+       ___return_lbl00002   0x00224e    program     static                          
                __config_0   0x300001    program     static E:\PIC18F2520_sensor_custom_uart_RS232\main.c
                __config_1   0x300002    program     static E:\PIC18F2520_sensor_custom_uart_RS232\main.c
                __config_2   0x300003    program     static E:\PIC18F2520_sensor_custom_uart_RS232\main.c
                __config_3   0x300005    program     static E:\PIC18F2520_sensor_custom_uart_RS232\main.c
                __config_4   0x300006    program     static E:\PIC18F2520_sensor_custom_uart_RS232\main.c
-                   __init   0x00278c    program     extern C:\MCC18\src\traditional\stdclib\__init.c
+                   __init   0x00273a    program     extern C:\MCC18\src\traditional\stdclib\__init.c
                    __pa_0   0x00095c    program     static C:\MCC18\src\traditional\stdclib\vfprintf.c
                    __pa_1   0x000964    program     static C:\MCC18\src\traditional\stdclib\vfprintf.c
                   __pa_10   0x000a18    program     static C:\MCC18\src\traditional\stdclib\vfprintf.c
@@ -266,30 +266,30 @@ Linker Map File - Created Wed May 11 15:29:12 2011
                    __pa_7   0x0009ca    program     static C:\MCC18\src\traditional\stdclib\vfprintf.c
                    __pa_8   0x0009d6    program     static C:\MCC18\src\traditional\stdclib\vfprintf.c
                    __pa_9   0x0009f8    program     static C:\MCC18\src\traditional\stdclib\vfprintf.c
-               __string_2   0x002588    program     static E:\PIC18F2520_sensor_custom_uart_RS232\main.c
+               __string_2   0x002536    program     static E:\PIC18F2520_sensor_custom_uart_RS232\main.c
               __tmplbl_42   0x000af2    program     static                          
               __tmplbl_43   0x00093a    program     static                          
               __tmplbl_44   0x000920    program     static                          
               __tmplbl_85   0x000072    program     static                          
-            __zero_memory   0x002702    program     extern C:\MCC18\src\traditional\proc\p18F2520.asm
-                _do_cinit   0x002204    program     extern C:\MCC18\src\traditional\startup\c018i.c
+            __zero_memory   0x0026b0    program     extern C:\MCC18\src\traditional\proc\p18F2520.asm
+                _do_cinit   0x0021b2    program     extern C:\MCC18\src\traditional\startup\c018i.c
                    _entry   0x000000    program     extern C:\MCC18\src\traditional\startup\c018i.c
-                   _false   0x002582    program     static                          
-                 _startup   0x002722    program     extern C:\MCC18\src\traditional\startup\c018i.c
-              _usart_putc   0x00273e    program     extern C:\MCC18\src\pmc_common\USART\_usartpc.asm
+                   _false   0x002530    program     static                          
+                 _startup   0x0026d0    program     extern C:\MCC18\src\traditional\startup\c018i.c
+              _usart_putc   0x0026ec    program     extern C:\MCC18\src\pmc_common\USART\_usartpc.asm
                _user_putc   0x000006    program     extern C:\MCC18\src\traditional\stdclib\_user_putc.c
-             cUSART_tInit   0x002070    program     extern E:\PIC18F2520_sensor_custom_uart_RS232\cusart.c
+             cUSART_tInit   0x00201e    program     extern E:\PIC18F2520_sensor_custom_uart_RS232\cusart.c
                calc_sht1x   0x000c3e    program     extern E:\PIC18F2520_sensor_custom_uart_RS232\SHT1x_helper.c
-                compare_l   0x002718    program     static C:\MCC18\src\traditional\proc\p18F2520.asm
-                copy_loop   0x002276    program     static                          
-            copy_one_byte   0x00227c    program     static                          
-                     done   0x0022a0    program     static                          
-             done_copying   0x00228a    program     static                          
-                  endloop   0x0026d8    program     static                          
+                compare_l   0x0026c6    program     static C:\MCC18\src\traditional\proc\p18F2520.asm
+                copy_loop   0x002224    program     static                          
+            copy_one_byte   0x00222a    program     static                          
+                     done   0x00224e    program     static                          
+             done_copying   0x002238    program     static                          
+                  endloop   0x002686    program     static                          
                      ftoa   0x00107e    program     extern E:\PIC18F2520_sensor_custom_uart_RS232\SHT1x_helper.c
-                 high_ISR   0x001938    program     extern E:\PIC18F2520_sensor_custom_uart_RS232\main.c
+                 high_ISR   0x001cc8    program     extern E:\PIC18F2520_sensor_custom_uart_RS232\main.c
            high_interrupt   0x000008    program     extern E:\PIC18F2520_sensor_custom_uart_RS232\main.c
-                  isdigit   0x0026de    program     extern C:\MCC18\src\traditional\stdclib\isdigit.asm
+                  isdigit   0x00268c    program     extern C:\MCC18\src\traditional\stdclib\isdigit.asm
                  jANotInf   0x00159e    program     static C:\MCC18\src\traditional\math\mulFP.asm
                  jANotInf   0x00147c    program     static C:\MCC18\src\traditional\math\addFP.asm
                  jANotNeg   0x001510    program     static C:\MCC18\src\traditional\math\addFP.asm
@@ -303,8 +303,8 @@ Linker Map File - Created Wed May 11 15:29:12 2011
              jBothNotZero   0x0015b8    program     static C:\MCC18\src\traditional\math\mulFP.asm
             jDifOrPosSign   0x00149e    program     static C:\MCC18\src\traditional\math\addFP.asm
                       jEQ   0x0017bc    program     static C:\MCC18\src\traditional\math\compFP.asm
-                     jEnd   0x0024a8    program     static C:\MCC18\src\traditional\stdclib\strlen.asm
-                     jEnd   0x0024e0    program     static C:\MCC18\src\traditional\stdclib\slenpgm.asm
+                     jEnd   0x002456    program     static C:\MCC18\src\traditional\stdclib\strlen.asm
+                     jEnd   0x00248e    program     static C:\MCC18\src\traditional\stdclib\slenpgm.asm
                     jExch   0x0017c8    program     static C:\MCC18\src\traditional\math\compFP.asm
                     jExit   0x00175c    program     static C:\MCC18\src\traditional\math\castFP16.asm
                    jExpEQ   0x00180e    program     static C:\MCC18\src\traditional\math\compFP.asm
@@ -312,17 +312,17 @@ Linker Map File - Created Wed May 11 15:29:12 2011
                jFinalSign   0x001578    program     static C:\MCC18\src\traditional\math\addFP.asm
                 jHaveZero   0x0015b4    program     static C:\MCC18\src\traditional\math\mulFP.asm
                 jI2F16Beg   0x00143c    program     static C:\MCC18\src\traditional\math\cast16FP.asm
-                    jLoop   0x0024c8    program     static C:\MCC18\src\traditional\stdclib\slenpgm.asm
-                    jLoop   0x00249e    program     static C:\MCC18\src\traditional\stdclib\strlen.asm
+                    jLoop   0x002476    program     static C:\MCC18\src\traditional\stdclib\slenpgm.asm
+                    jLoop   0x00244c    program     static C:\MCC18\src\traditional\stdclib\strlen.asm
                     jLoop   0x00173c    program     static C:\MCC18\src\traditional\math\castFP16.asm
                 jLoopExit   0x00174c    program     static C:\MCC18\src\traditional\math\castFP16.asm
-                   jMatch   0x0026fe    program     static C:\MCC18\src\traditional\stdclib\isdigit.asm
+                   jMatch   0x0026ac    program     static C:\MCC18\src\traditional\stdclib\isdigit.asm
                      jMax   0x001710    program     static C:\MCC18\src\traditional\math\castFP16.asm
                   jMaxNeg   0x00171e    program     static C:\MCC18\src\traditional\math\castFP16.asm
                   jMaxPos   0x001714    program     static C:\MCC18\src\traditional\math\castFP16.asm
                       jNE   0x0017c0    program     static C:\MCC18\src\traditional\math\compFP.asm
                   jNoExch   0x0017e8    program     static C:\MCC18\src\traditional\math\compFP.asm
-                 jNoMatch   0x002700    program     static C:\MCC18\src\traditional\stdclib\isdigit.asm
+                 jNoMatch   0x0026ae    program     static C:\MCC18\src\traditional\stdclib\isdigit.asm
              jNotBothZero   0x0014a2    program     static C:\MCC18\src\traditional\math\addFP.asm
                   jNotInf   0x00172c    program     static C:\MCC18\src\traditional\math\castFP16.asm
                   jPkLoop   0x001872    program     static C:\MCC18\src\traditional\math\packFP.asm
@@ -346,31 +346,31 @@ Linker Map File - Created Wed May 11 15:29:12 2011
                  jWNotNeg   0x001524    program     static C:\MCC18\src\traditional\math\addFP.asm
                     jZero   0x001726    program     static C:\MCC18\src\traditional\math\castFP16.asm
                jZero1and2   0x00184c    program     static C:\MCC18\src\traditional\math\packFP.asm
-                     loop   0x00254e    program     static                          
-                     loop   0x00274e    program     static C:\MCC18\src\pmc_common\USART\_usartpc.asm
-                     loop   0x002732    program     static                          
-                     loop   0x0026bc    program     static                          
-                   loop_h   0x002710    program     static C:\MCC18\src\traditional\proc\p18F2520.asm
-                   loop_l   0x00271a    program     static C:\MCC18\src\traditional\proc\p18F2520.asm
-                     main   0x0019ee    program     extern E:\PIC18F2520_sensor_custom_uart_RS232\main.c
-                     putc   0x00232c    program     extern C:\MCC18\src\traditional\stdclib\putc.c
-                putsUSART   0x0024f4    program     extern C:\MCC18\src\pmc_common\USART\uputs.c
-        s_connectionreset   0x001ee4    program     extern E:\PIC18F2520_sensor_custom_uart_RS232\SHT1x.c
-                 s_digits   0x00276c    program     static C:\MCC18\src\traditional\stdclib\vfprintf.c
-                s_measure   0x001d06    program     extern E:\PIC18F2520_sensor_custom_uart_RS232\SHT1x.c
+                     loop   0x0024fc    program     static                          
+                     loop   0x0026fc    program     static C:\MCC18\src\pmc_common\USART\_usartpc.asm
+                     loop   0x0026e0    program     static                          
+                     loop   0x00266a    program     static                          
+                   loop_h   0x0026be    program     static C:\MCC18\src\traditional\proc\p18F2520.asm
+                   loop_l   0x0026c8    program     static C:\MCC18\src\traditional\proc\p18F2520.asm
+                     main   0x001d7e    program     extern E:\PIC18F2520_sensor_custom_uart_RS232\main.c
+                     putc   0x0022da    program     extern C:\MCC18\src\traditional\stdclib\putc.c
+                putsUSART   0x0024a2    program     extern C:\MCC18\src\pmc_common\USART\uputs.c
+        s_connectionreset   0x001b3c    program     extern E:\PIC18F2520_sensor_custom_uart_RS232\SHT1x.c
+                 s_digits   0x00271a    program     static C:\MCC18\src\traditional\stdclib\vfprintf.c
+                s_measure   0x00195e    program     extern E:\PIC18F2520_sensor_custom_uart_RS232\SHT1x.c
             s_put_n_chars   0x00001c    program     static C:\MCC18\src\traditional\stdclib\vfprintf.c
-              s_read_byte   0x001f40    program     extern E:\PIC18F2520_sensor_custom_uart_RS232\SHT1x.c
-              s_softreset   0x001ce0    program     extern E:\PIC18F2520_sensor_custom_uart_RS232\SHT1x.c
-             s_transstart   0x001e48    program     extern E:\PIC18F2520_sensor_custom_uart_RS232\SHT1x.c
-             s_write_byte   0x001fe2    program     extern E:\PIC18F2520_sensor_custom_uart_RS232\SHT1x.c
-                  sprintf   0x002158    program     extern C:\MCC18\src\traditional\stdclib\sprintf.c
-                   strlen   0x00248e    program     extern C:\MCC18\src\traditional\stdclib\strlen.asm
-                strlenpgm   0x0024aa    program     extern C:\MCC18\src\traditional\stdclib\slenpgm.asm
-                     test   0x00221e    program     static                          
-                    uputc   0x0020b8    program     extern E:\PIC18F2520_sensor_custom_uart_RS232\cusart.c
-                    uputs   0x00207c    program     extern E:\PIC18F2520_sensor_custom_uart_RS232\cusart.c
+              s_read_byte   0x001b98    program     extern E:\PIC18F2520_sensor_custom_uart_RS232\SHT1x.c
+              s_softreset   0x001938    program     extern E:\PIC18F2520_sensor_custom_uart_RS232\SHT1x.c
+             s_transstart   0x001aa0    program     extern E:\PIC18F2520_sensor_custom_uart_RS232\SHT1x.c
+             s_write_byte   0x001c3a    program     extern E:\PIC18F2520_sensor_custom_uart_RS232\SHT1x.c
+                  sprintf   0x002106    program     extern C:\MCC18\src\traditional\stdclib\sprintf.c
+                   strlen   0x00243c    program     extern C:\MCC18\src\traditional\stdclib\strlen.asm
+                strlenpgm   0x002458    program     extern C:\MCC18\src\traditional\stdclib\slenpgm.asm
+                     test   0x0021cc    program     static                          
+                    uputc   0x002066    program     extern E:\PIC18F2520_sensor_custom_uart_RS232\cusart.c
+                    uputs   0x00202a    program     extern E:\PIC18F2520_sensor_custom_uart_RS232\cusart.c
                  vfprintf   0x000048    program     extern C:\MCC18\src\traditional\stdclib\vfprintf.c
-               zero_block   0x002710    program     static C:\MCC18\src\traditional\proc\p18F2520.asm
+               zero_block   0x0026be    program     static C:\MCC18\src\traditional\proc\p18F2520.asm
                    ADCON0   0x000fc2       data     extern C:\MCC18\src\traditional\proc\p18F2520.asm
                ADCON0bits   0x000fc2       data     extern C:\MCC18\src\traditional\proc\p18F2520.asm
                    ADCON1   0x000fc1       data     extern C:\MCC18\src\traditional\proc\p18F2520.asm
@@ -627,8 +627,8 @@ Linker Map File - Created Wed May 11 15:29:12 2011
                   __pa_19   0x000ac2    program     static C:\MCC18\src\traditional\stdclib\vfprintf.c
                   __pa_20   0x000ad2    program     static C:\MCC18\src\traditional\stdclib\vfprintf.c
                   __pa_21   0x000ae2    program     static C:\MCC18\src\traditional\stdclib\vfprintf.c
-                  __pa_22   0x000af2    program     static C:\MCC18\src\traditional\stdclib\vfprintf.c
               __tmplbl_42   0x000af2    program     static                          
+                  __pa_22   0x000af2    program     static C:\MCC18\src\traditional\stdclib\vfprintf.c
                   __pa_23   0x000afe    program     static C:\MCC18\src\traditional\stdclib\vfprintf.c
                   __pa_24   0x000b0c    program     static C:\MCC18\src\traditional\stdclib\vfprintf.c
                   __pa_25   0x000b14    program     static C:\MCC18\src\traditional\stdclib\vfprintf.c
@@ -723,8 +723,8 @@ Linker Map File - Created Wed May 11 15:29:12 2011
                   jPkLoop   0x001872    program     static C:\MCC18\src\traditional\math\packFP.asm
              jPkShiftDone   0x00188e    program     static C:\MCC18\src\traditional\math\packFP.asm
                jPkRoundIt   0x0018a4    program     static C:\MCC18\src\traditional\math\packFP.asm
-             jPkRoundDone   0x0018bc    program     static C:\MCC18\src\traditional\math\packFP.asm
               __FpReturnW   0x0018bc    program     extern C:\MCC18\src\traditional\math\packFP.asm
+             jPkRoundDone   0x0018bc    program     static C:\MCC18\src\traditional\math\packFP.asm
               __FpUnPackA   0x0018dc    program     extern C:\MCC18\src\traditional\math\UnpackFP.asm
                   jUnpkA1   0x0018e6    program     static C:\MCC18\src\traditional\math\UnpackFP.asm
                  jUnpkANZ   0x0018f4    program     static C:\MCC18\src\traditional\math\UnpackFP.asm
@@ -734,69 +734,69 @@ Linker Map File - Created Wed May 11 15:29:12 2011
                   jUnpkB1   0x001916    program     static C:\MCC18\src\traditional\math\UnpackFP.asm
                  jUnpkBNZ   0x001924    program     static C:\MCC18\src\traditional\math\UnpackFP.asm
                   jUnpkB2   0x00192e    program     static C:\MCC18\src\traditional\math\UnpackFP.asm
-                 high_ISR   0x001938    program     extern E:\PIC18F2520_sensor_custom_uart_RS232\main.c
-                     main   0x0019ee    program     extern E:\PIC18F2520_sensor_custom_uart_RS232\main.c
-              s_softreset   0x001ce0    program     extern E:\PIC18F2520_sensor_custom_uart_RS232\SHT1x.c
-                s_measure   0x001d06    program     extern E:\PIC18F2520_sensor_custom_uart_RS232\SHT1x.c
-             s_transstart   0x001e48    program     extern E:\PIC18F2520_sensor_custom_uart_RS232\SHT1x.c
-        s_connectionreset   0x001ee4    program     extern E:\PIC18F2520_sensor_custom_uart_RS232\SHT1x.c
-              s_read_byte   0x001f40    program     extern E:\PIC18F2520_sensor_custom_uart_RS232\SHT1x.c
-             s_write_byte   0x001fe2    program     extern E:\PIC18F2520_sensor_custom_uart_RS232\SHT1x.c
-             cUSART_tInit   0x002070    program     extern E:\PIC18F2520_sensor_custom_uart_RS232\cusart.c
-                    uputs   0x00207c    program     extern E:\PIC18F2520_sensor_custom_uart_RS232\cusart.c
-                    uputc   0x0020b8    program     extern E:\PIC18F2520_sensor_custom_uart_RS232\cusart.c
-                  sprintf   0x002158    program     extern C:\MCC18\src\traditional\stdclib\sprintf.c
-                _do_cinit   0x002204    program     extern C:\MCC18\src\traditional\startup\c018i.c
-                     test   0x00221e    program     static                          
-                copy_loop   0x002276    program     static                          
-            copy_one_byte   0x00227c    program     static                          
-             done_copying   0x00228a    program     static                          
-       ___return_lbl00002   0x0022a0    program     static                          
-                     done   0x0022a0    program     static                          
-                OpenUSART   0x0022a2    program     extern C:\MCC18\src\pmc_common\USART\uopen.c
-                     putc   0x00232c    program     extern C:\MCC18\src\traditional\stdclib\putc.c
-                  FXM3232   0x0023b0    program     extern C:\MCC18\src\traditional\math\fxm3232.c
-       ___return_lbl00000   0x00241e    program     static                          
-                  OpenADC   0x002420    program     extern C:\MCC18\src\pmc_common\ADC\adcopen.c
-                   strlen   0x00248e    program     extern C:\MCC18\src\traditional\stdclib\strlen.asm
-                    jLoop   0x00249e    program     static C:\MCC18\src\traditional\stdclib\strlen.asm
-                     jEnd   0x0024a8    program     static C:\MCC18\src\traditional\stdclib\strlen.asm
-                strlenpgm   0x0024aa    program     extern C:\MCC18\src\traditional\stdclib\slenpgm.asm
-                    jLoop   0x0024c8    program     static C:\MCC18\src\traditional\stdclib\slenpgm.asm
-                   _2jEnd   0x0024de    program     static C:\MCC18\src\traditional\stdclib\slenpgm.asm
-                     jEnd   0x0024e0    program     static C:\MCC18\src\traditional\stdclib\slenpgm.asm
-                putsUSART   0x0024f4    program     extern C:\MCC18\src\pmc_common\USART\uputs.c
-                 FXD3232U   0x002540    program     extern C:\MCC18\src\traditional\math\fxd3232u.c
-                     loop   0x00254e    program     static                          
-                   _false   0x002582    program     static                          
-       ___return_lbl00000   0x002586    program     static                          
-               __string_2   0x002588    program     static E:\PIC18F2520_sensor_custom_uart_RS232\main.c
-               OpenTimer1   0x0025cc    program     extern C:\MCC18\src\pmc_common\Timers\t1open.c
-                  DelayMs   0x00260e    program     extern E:\PIC18F2520_sensor_custom_uart_RS232\delay.c
-              WriteTimer1   0x00264c    program     extern C:\MCC18\src\pmc_common\Timers\t1write.c
-               WriteUSART   0x002684    program     extern C:\MCC18\src\pmc_common\USART\uwrite.c
-                 FXD1616U   0x0026b2    program     extern C:\MCC18\src\traditional\math\fxd1616u.c
-                     loop   0x0026bc    program     static                          
-                  endloop   0x0026d8    program     static                          
-       ___return_lbl00000   0x0026dc    program     static                          
-                  isdigit   0x0026de    program     extern C:\MCC18\src\traditional\stdclib\isdigit.asm
-                   jMatch   0x0026fe    program     static C:\MCC18\src\traditional\stdclib\isdigit.asm
-                 jNoMatch   0x002700    program     static C:\MCC18\src\traditional\stdclib\isdigit.asm
-            __zero_memory   0x002702    program     extern C:\MCC18\src\traditional\proc\p18F2520.asm
-               zero_block   0x002710    program     static C:\MCC18\src\traditional\proc\p18F2520.asm
-                   loop_h   0x002710    program     static C:\MCC18\src\traditional\proc\p18F2520.asm
-                compare_l   0x002718    program     static C:\MCC18\src\traditional\proc\p18F2520.asm
-                   loop_l   0x00271a    program     static C:\MCC18\src\traditional\proc\p18F2520.asm
-                 _startup   0x002722    program     extern C:\MCC18\src\traditional\startup\c018i.c
-                     loop   0x002732    program     static                          
-       ___return_lbl00001   0x00273c    program     static                          
-              _usart_putc   0x00273e    program     extern C:\MCC18\src\pmc_common\USART\_usartpc.asm
-                     loop   0x00274e    program     static C:\MCC18\src\pmc_common\USART\_usartpc.asm
-                  ReadADC   0x00275a    program     extern C:\MCC18\src\pmc_common\ADC\adcread.c
-                 s_digits   0x00276c    program     static C:\MCC18\src\traditional\stdclib\vfprintf.c
-                  BusyADC   0x00277e    program     extern C:\MCC18\src\pmc_common\ADC\adcbusy.c
-               ConvertADC   0x002788    program     extern C:\MCC18\src\pmc_common\ADC\adcconv.c
-                   __init   0x00278c    program     extern C:\MCC18\src\traditional\stdclib\__init.c
+              s_softreset   0x001938    program     extern E:\PIC18F2520_sensor_custom_uart_RS232\SHT1x.c
+                s_measure   0x00195e    program     extern E:\PIC18F2520_sensor_custom_uart_RS232\SHT1x.c
+             s_transstart   0x001aa0    program     extern E:\PIC18F2520_sensor_custom_uart_RS232\SHT1x.c
+        s_connectionreset   0x001b3c    program     extern E:\PIC18F2520_sensor_custom_uart_RS232\SHT1x.c
+              s_read_byte   0x001b98    program     extern E:\PIC18F2520_sensor_custom_uart_RS232\SHT1x.c
+             s_write_byte   0x001c3a    program     extern E:\PIC18F2520_sensor_custom_uart_RS232\SHT1x.c
+                 high_ISR   0x001cc8    program     extern E:\PIC18F2520_sensor_custom_uart_RS232\main.c
+                     main   0x001d7e    program     extern E:\PIC18F2520_sensor_custom_uart_RS232\main.c
+             cUSART_tInit   0x00201e    program     extern E:\PIC18F2520_sensor_custom_uart_RS232\cusart.c
+                    uputs   0x00202a    program     extern E:\PIC18F2520_sensor_custom_uart_RS232\cusart.c
+                    uputc   0x002066    program     extern E:\PIC18F2520_sensor_custom_uart_RS232\cusart.c
+                  sprintf   0x002106    program     extern C:\MCC18\src\traditional\stdclib\sprintf.c
+                _do_cinit   0x0021b2    program     extern C:\MCC18\src\traditional\startup\c018i.c
+                     test   0x0021cc    program     static                          
+                copy_loop   0x002224    program     static                          
+            copy_one_byte   0x00222a    program     static                          
+             done_copying   0x002238    program     static                          
+       ___return_lbl00002   0x00224e    program     static                          
+                     done   0x00224e    program     static                          
+                OpenUSART   0x002250    program     extern C:\MCC18\src\pmc_common\USART\uopen.c
+                     putc   0x0022da    program     extern C:\MCC18\src\traditional\stdclib\putc.c
+                  FXM3232   0x00235e    program     extern C:\MCC18\src\traditional\math\fxm3232.c
+       ___return_lbl00000   0x0023cc    program     static                          
+                  OpenADC   0x0023ce    program     extern C:\MCC18\src\pmc_common\ADC\adcopen.c
+                   strlen   0x00243c    program     extern C:\MCC18\src\traditional\stdclib\strlen.asm
+                    jLoop   0x00244c    program     static C:\MCC18\src\traditional\stdclib\strlen.asm
+                     jEnd   0x002456    program     static C:\MCC18\src\traditional\stdclib\strlen.asm
+                strlenpgm   0x002458    program     extern C:\MCC18\src\traditional\stdclib\slenpgm.asm
+                    jLoop   0x002476    program     static C:\MCC18\src\traditional\stdclib\slenpgm.asm
+                   _2jEnd   0x00248c    program     static C:\MCC18\src\traditional\stdclib\slenpgm.asm
+                     jEnd   0x00248e    program     static C:\MCC18\src\traditional\stdclib\slenpgm.asm
+                putsUSART   0x0024a2    program     extern C:\MCC18\src\pmc_common\USART\uputs.c
+                 FXD3232U   0x0024ee    program     extern C:\MCC18\src\traditional\math\fxd3232u.c
+                     loop   0x0024fc    program     static                          
+                   _false   0x002530    program     static                          
+       ___return_lbl00000   0x002534    program     static                          
+               __string_2   0x002536    program     static E:\PIC18F2520_sensor_custom_uart_RS232\main.c
+               OpenTimer1   0x00257a    program     extern C:\MCC18\src\pmc_common\Timers\t1open.c
+                  DelayMs   0x0025bc    program     extern E:\PIC18F2520_sensor_custom_uart_RS232\delay.c
+              WriteTimer1   0x0025fa    program     extern C:\MCC18\src\pmc_common\Timers\t1write.c
+               WriteUSART   0x002632    program     extern C:\MCC18\src\pmc_common\USART\uwrite.c
+                 FXD1616U   0x002660    program     extern C:\MCC18\src\traditional\math\fxd1616u.c
+                     loop   0x00266a    program     static                          
+                  endloop   0x002686    program     static                          
+       ___return_lbl00000   0x00268a    program     static                          
+                  isdigit   0x00268c    program     extern C:\MCC18\src\traditional\stdclib\isdigit.asm
+                   jMatch   0x0026ac    program     static C:\MCC18\src\traditional\stdclib\isdigit.asm
+                 jNoMatch   0x0026ae    program     static C:\MCC18\src\traditional\stdclib\isdigit.asm
+            __zero_memory   0x0026b0    program     extern C:\MCC18\src\traditional\proc\p18F2520.asm
+               zero_block   0x0026be    program     static C:\MCC18\src\traditional\proc\p18F2520.asm
+                   loop_h   0x0026be    program     static C:\MCC18\src\traditional\proc\p18F2520.asm
+                compare_l   0x0026c6    program     static C:\MCC18\src\traditional\proc\p18F2520.asm
+                   loop_l   0x0026c8    program     static C:\MCC18\src\traditional\proc\p18F2520.asm
+                 _startup   0x0026d0    program     extern C:\MCC18\src\traditional\startup\c018i.c
+                     loop   0x0026e0    program     static                          
+       ___return_lbl00001   0x0026ea    program     static                          
+              _usart_putc   0x0026ec    program     extern C:\MCC18\src\pmc_common\USART\_usartpc.asm
+                     loop   0x0026fc    program     static C:\MCC18\src\pmc_common\USART\_usartpc.asm
+                  ReadADC   0x002708    program     extern C:\MCC18\src\pmc_common\ADC\adcread.c
+                 s_digits   0x00271a    program     static C:\MCC18\src\traditional\stdclib\vfprintf.c
+                  BusyADC   0x00272c    program     extern C:\MCC18\src\pmc_common\ADC\adcbusy.c
+               ConvertADC   0x002736    program     extern C:\MCC18\src\pmc_common\ADC\adcconv.c
+                   __init   0x00273a    program     extern C:\MCC18\src\traditional\stdclib\__init.c
                __config_0   0x300001    program     static E:\PIC18F2520_sensor_custom_uart_RS232\main.c
                __config_1   0x300002    program     static E:\PIC18F2520_sensor_custom_uart_RS232\main.c
                __config_2   0x300003    program     static E:\PIC18F2520_sensor_custom_uart_RS232\main.c
