@@ -39,8 +39,9 @@
 	
 	//#define _1msec_16bit 65095
 	#define _1msec_16bit 64793
-
+	enum boolean{FALSE,TRUE};
 	void cUSART_tInit(void);
+	enum boolean get_cuUSART_status(void);
 	void uputc(char data);
 	void uputs(char *s);
 #endif

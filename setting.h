@@ -25,10 +25,16 @@
 #define SHT10_SIGN_LED_TRIS TRISAbits.TRISA4
 
 //build-in USART pins
-#define UART_RTS	PORTCbits.RC5
-#define UART_CTS	PORTCbits.RC3
-#define UART_RTS_TRIS	TRISCbits.TRISC5
-#define UART_CTS_TRIS	TRISCbits.TRISC3
+//#define UART_Bluetooth_RTS	PORTCbits.RC0
+//#define UART_Bluetooth_CTS	PORTCbits.RC1
+//#define UART_Bluetooth_RTS_TRIS	TRISCbits.TRISC0
+//#define UART_Bluetooth_CTS_TRIS	TRISCbits.TRISC1
+
+#define UART_xBee_RTS	PORTCbits.RC2
+#define UART_xBee_CTS	PORTCbits.RC3
+#define UART_xBee_RTS_TRIS	TRISCbits.TRISC2
+#define UART_xBee_CTS_TRIS	TRISCbits.TRISC3
+
 #define UART_RX_TRIS TRISCbits.TRISC7
 #define UART_TX_TRIS TRISCbits.TRISC6
 

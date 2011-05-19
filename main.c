@@ -2,6 +2,18 @@
 #include "setup.h"
 #include "setting.h"	// Load Customized Source Code
 
+
+#pragma udata mydata
+ enum boolean{FALSE,TRUE};
+ enum boolean ADCfirst = FALSE;
+ unsigned char buffer1[6],buffer2[6];
+ unsigned char Rx;
+ int adcResult;
+ char to232[]="to RS232 ";
+ char toxbee[]="to xBee";
+ char astr[60]; 
+#pragma
+
 ////////// INTERRUPT HANDLER /////////////
 void high_ISR(void);
 #pragma code high_vector=0x08
@@ -12,27 +24,47 @@ void high_interrupt(void){
 #pragma code
 #pragma interrupt high_ISR
 void high_ISR(void){
-	if(PIR1bits.ADIF == 1)
+//-----------USART handler Start --------------
+
+	if(PIR1bits.RCIF) {	
+		//if(!BusyUSART() && !UART_xBee_RTS){
+		//while(BusyUSART());
+			Rx = getcUSART();
+		//while(BusyUSART());
+			putcUSART(Rx);
+		//}
+		//}
+		PIR1bits.RCIF = 0;
+	}
+	
+//-----------USART handler End --------------
+
+	if(PIR1bits.ADIF)
 	{
-		if(ReadADC() <200 )
-			LI_SIGN_LED = ~LI_SIGN_LED;
+		if(ADCfirst){
+			PIE1bits.ADIE = 0;
+			ADCfirst = FALSE;
+		}else {
+			if(adcResult <200 ){
+				ADCfirst = TRUE;
+				LI_SIGN_LED = ~LI_SIGN_LED;
+			}
+		}
 		PIR1bits.ADIF = 0;
 	}
+
 //	if(PIR1bits.TMR1IF == 1) {
 //		PIR1bits.TMR1IF = 0;
 //		//cnt=(cnt == 10)?0:cnt++;
 //	}
 }
 /////////////////////////////////////
-#pragma udata mydata
- unsigned char buffer1[6],buffer2[6];
- char to232[]="to RS232 ";
- char toxbee[]="to xBee";
- char astr[60]; 
-#pragma
+
 
 void main(void){
-	int i = 0,adcResult;
+	enum xEvent{MEASURE,CHECK,ERROR,MLIGHT,CONVCALC,TOSTRING,PRINT,SLEEP};
+	enum xEvent e = MEASURE;
+	int i = 0,cnt =0;
 	unsigned char error, checksum;
 	value humi_val, temp_val;
 	myfloat h_val , t_val;
@@ -40,10 +72,13 @@ void main(void){
 	OSCCON |= 0x70;
 	OSCTUNE = 0x40;
 
-	UART_CTS_TRIS = OUT;	
+	UART_xBee_RTS_TRIS = OUT;	
+	UART_xBee_CTS_TRIS = IN;
+	
 	UART_TX_TRIS = OUT;		 //Tx
 	UART_RX_TRIS = IN;		//Rx
-	
+	UART_xBee_RTS = 1;
+
 	CUART_TX_TRIS = OUT;	//TX
 	CUART_RX_TRIS = IN;		//RX
 
@@ -77,50 +112,68 @@ void main(void){
 	cUSART_tInit();
 
 	while(1){
+		switch(e){
+			case MEASURE:
+							error=0;
+				   			error+=s_measure((unsigned char*)&humi_val.i,&checksum,HUMI);  	//measure humidity
+				   			error+=s_measure((unsigned char*)&temp_val.i,&checksum,TEMP);  	//measure temperature
+							e = CHECK;
+							break;
+			case CHECK:
+							if(error!=0)
+								e = ERROR;	
+							else
+								e = MLIGHT;
+							break;
+			case ERROR:
+							s_connectionreset();			//in case of an error: connection reset               {
+	   						SHT10_CONN_LED = 1;
+							e = MEASURE;
+							break;
+			case MLIGHT:
+							SHT10_CONN_LED = 0;											//sht10 connection success
 
-		error=0;
-	    error+=s_measure((unsigned char*)&humi_val.i,&checksum,HUMI);  	//measure humidity
-	    error+=s_measure((unsigned char*)&temp_val.i,&checksum,TEMP);  	//measure temperature
-
-	    if(error!=0) {
-			s_connectionreset();										//in case of an error: connection reset               {
-	   		SHT10_CONN_LED = 1;
+							ConvertADC();												//start ADC
+							while(BusyADC());
+							adcResult=ReadADC();
+							e = CONVCALC;
+							break;
+			case CONVCALC: 
+							//memset(dataout,0,60);										//clear array
+					      	humi_val.f=(float)humi_val.i;								//converts integer to float
+					      	temp_val.f=(float)temp_val.i;								//converts integer to float
+							calc_sht1x(&humi_val.f,&temp_val.f);						//calculate humidity, temperature
+							e = TOSTRING;
+			case TOSTRING:
+							//-----------------------------
+							ftoa(buffer1, temp_val.f);									//convert floating point to string in 1 dec place
+							ftoa(buffer2, humi_val.f);									//convert floating point to string in 1 dec place
+							//sprintf(astr,(const far rom char*)"\rTemperature: %s C Relative Humidity: %s %% Light Intensity: %d \$\n",buffer1,buffer2,adcResult);						
+							sprintf(astr,(const far rom char*)"T: %s RH: %s LI: %d \$",buffer1,buffer2,adcResult);						
+							//-----------------------------
+							e = PRINT;
+							break;
+			case PRINT:	
+							SHT10_SIGN_LED = ~SHT10_SIGN_LED;
+							while(BusyUSART()&& !UART_xBee_RTS); 
+							putsUSART(astr);
+							uputs(astr);
+							e = SLEEP;
+							//PIE1bits.ADIE = 1;
+							break;
+			case SLEEP:
+								//DelayMs(200);
+							Delay10KTCYx(100);
+							if(cnt==8){
+								e = MEASURE;
+								cnt=0;
+							}else
+								cnt++;
+							break;
 		}
-		else
-		{	
-			SHT10_CONN_LED = 0;											//sht10 connection success
 
-			ConvertADC();												//start ADC
-			while(BusyADC());
-			adcResult=ReadADC();
-
-			//memset(dataout,0,60);										//clear array
-	      	humi_val.f=(float)humi_val.i;								//converts integer to float
-	      	temp_val.f=(float)temp_val.i;								//converts integer to float
-			calc_sht1x(&humi_val.f,&temp_val.f);						//calculate humidity, temperature
-
-			//-----------------------------
-			
-			ftoa(buffer1, temp_val.f);									//convert floating point to string in 1 dec place
-			ftoa(buffer2, humi_val.f);									//convert floating point to string in 1 dec place
-			sprintf(astr,(const far rom char*)"\rTemperature: %s C Relative Humidity: %s %% Light Intensity: %d \$\n",buffer1,buffer2,adcResult);
-		
-			//-----------------------------
-		
-			SHT10_SIGN_LED = ~SHT10_SIGN_LED;
-			while(BusyUSART()&& !UART_CTS); 
-			putsUSART(astr);
-			uputs(astr);
-	    }
+	    //putcUSART('.');
 	      //----------wait approx. 1s to avoid heating up SHTxx--------------          
 		
-//		if(BusyUSART()&& !UART_CTS){
-//			input = getcUSART();
-//			putcUSART(input);
-//		}
-		//uputs(to232);
-		//putsUSART(toxbee);
-		for(i=0;i<5;i++)
-			DelayMs(200);
 	}
 }

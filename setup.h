@@ -1,6 +1,6 @@
 #include "stdio.h"
 #include "stdlib.h"
-//#include "delays.h"
+#include "delays.h"
 #include "timers.h"
 #include "string.h"
 #include "usart.h"
